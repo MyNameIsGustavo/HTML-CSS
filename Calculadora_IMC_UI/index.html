@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Icons/Icons.png" type="image/x-icon">
+    <title>Be Healthy - IMC.</title>
+</head>
+<!-- Desenvolvimento da calculadora de IMC-->
+<body>
+    <form action="">
+    <fieldset class="secção_principal">
+            <h1>Your Data, Your Health!</h1>
+            <p>Be Healthy.</p>
+            <label for="Altura">Digite a sua altura (CM):</label>
+            <input type="number" name="Altura" id="Altura" pattern="[0-9]+$"><br><br>
+            <label for="Peso">Digite o seu peso (KG):</label>
+            <input type="number" name="Peso" id="Peso" pattern="[0-9]+$"><br><br>
+            <div class="resultado" id="resultado">O seu IMC é...</div><br>
+            <button type="reset" class="btn" value="calcular" onclick="calcular()">Calcular</button><br>
+            <script>
+            //Lógica de programação do IMC.
+                function calcular() {
+                    var tn1 = window.document.getElementById('Altura')
+                    var tn2 = window.document.getElementById('Peso')
+                    var resultado = window.document.getElementById('resultado')
+                    var n1 = Number(tn1.value)
+                    var n2 = Number(tn2.value)
+                    var s = (n2 / (n1 * n1) *10000).toFixed(2);
+            //Tratando os possíveis erros.                
+                if (n1 || n2 <= 0){
+                    resultado.innerHTML = `Digite os seus dados verdadeiros.`
+                }
+                if (n1 <= 0){
+                  resultado.innerHTML = `Digite os seus dados verdadeiros.`
+                }
+                else{
+                    resultado.innerHTML = `O seu índice de massa corporal é de ${s}`
+                }
+            }
+            </script>
+    </fieldset>
+    </form>
+</body>
+</html>

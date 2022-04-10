@@ -1,0 +1,132 @@
+/*Desenvolvimento da estilização da página;*/
+
+body{
+    background-color:#002063;
+}
+h1{
+    font-size:xx-large;
+    color: #588dff;
+    background-color: #002063;
+    margin: 0.2em;
+}
+p{
+    color: white;
+    font-size: x-large;
+}
+.secção_principal{
+    color: #2267F2;
+    text-align: center;
+    width: 30em;
+    background-color: #011640;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 21%;
+    margin: auto;
+}
+.secção_principal, h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 15px;
+}
+Label, #Altura, #Peso{
+    margin: 0;
+    color: white;
+    background-color: #011640;
+    border-color: white;
+    outline: 0; 
+    border-width: 0 0 2px;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;   
+}
+Label, #Peso{
+    width: 10.7rem;
+}
+.resultado{
+    color: white;
+}
+.btn{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 20em;
+    border-radius: 10px;
+    background:#011640;
+    border-color: white;
+}
+.secção_principal:hover{
+    transition: 0.5s;
+    transform: scale(105%);
+}
+/*Desenvolvimento de responsividade;*/
+/*Responsividade para Dispositivos Móveis: 525px*/
+@media(max-width: 525px){
+    .secção_principal{
+        width: 70%;
+    }
+    h1{
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 0.2em;
+    }
+}
+
+/*Responsividade para Dispositivos Móveis: 485px*/
+@media (max-width: 490px){
+    Label, #Peso{
+    margin: 0.5em;
+}
+}
+
+/*Responsividade para Dispositivos Móveis: {G} ou 425px*/
+@media (max-width: 425px){
+    .secção_principal{
+        width: 80%;
+    }
+    h1{
+        margin: 16%;
+        margin-top: 0.2em;
+    }
+    Label, #Peso{
+        margin: 1em;
+    }
+}
+
+/*Responsividade para Dispositivos Móveis: {M} ou 375px*/
+@media (max-width: 375px){
+    .secção_principal{
+        position: absolute;
+        top: 15%;
+        width: 80%;
+    }
+    h1{
+        margin: 12%;
+        margin-top: 0.2em;
+    }
+}
+
+/*Responsividade para Dispositivos Móveis: {P} ou 320px*/
+@media (max-width: 320px){
+    .secção_principal{
+        width: 80%;
+    }
+    h1{
+        margin: 12%;
+        margin-top: 0.2em;
+    }
+}
+
+/*Responsividade para Dispositivos Móveis: {PP} ou 280px*/
+@media (max-width: 320px){
+    .secção_principal{
+        position: absolute;
+        top: 5.5em;
+        width: 70%;
+    }
+    h1{
+        margin: 0%;
+        margin-top: 0.2em;
+    }
+    .btn{
+        width: 100%;
+    }
+}
